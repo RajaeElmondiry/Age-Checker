@@ -1,0 +1,112 @@
+:root {
+  --bg-color: #f2f5f1;          /* background soft */
+  --card-color: #ffffff;       /* cards */
+  --primary-color: #0C3B2E;    /* main buttons / titles */
+  --secondary-color: #6D9773;  /* labels / secondary text */
+  --accent-color: #FFBA00;     /* highlight */
+  --text-color: #0C3B2E;
+  --border-radius: 10px;
+}
+
+/* ===== Global ===== */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(180deg, #f2f5f1, #e7eee8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: var(--text-color);
+}
+
+/* ===== Card ===== */
+.container {
+  background: var(--card-color);
+  padding: 24px 28px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 25px rgba(12, 59, 46, 0.12);
+  width: 320px;
+  text-align: center;
+}
+
+/* ===== Text ===== */
+h2 {
+  color: var(--primary-color);
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+label {
+  color: var(--secondary-color);
+  font-size: 14px;
+}
+
+/* ===== Input ===== */
+input {
+  padding: 10px 12px;
+  width: 100%;
+  border: 1.5px solid #d5e0d9;
+  border-radius: var(--border-radius);
+  font-size: 14px;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(12, 59, 46, 0.15);
+}
+
+/* ===== Buttons ===== */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  margin: 6px;
+  font-size: 14px;
+  transition: transform 0.2s, box-shadow 0.2s, opacity 0.2s;
+}
+
+button:first-of-type {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+button:last-of-type {
+  background-color: var(--accent-color);
+  color: #0C3B2E;
+  font-weight: 600;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  opacity: 0.95;
+}
+
+/* ===== Popup ===== */
+
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+}
+
+.popup-content {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--card-color);
+  padding: 22px;
+  border-radius: var(--border-radius);
+  width: 320px;
+  text-align: center;
+  color: var(--text-color);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  animation: slideDown 0.3s ease;
+}
+

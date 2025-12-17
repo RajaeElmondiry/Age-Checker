@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Checker</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon-32x32.png">
+</head>
+<body>
+
+  <div class="container">
+    <h2>This page shows:</h2>
+
+    <label for="t1">How old are you?</label><br><br>
+
+    <input type="text" id="t1" placeholder="Enter your age"><br><br>
+    <p id="result"></p>
+    <button onclick="ok()">OK</button>
+    <button onclick="annuler()">Cancel</button>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <p id="popupMessage"></p>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
